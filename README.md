@@ -32,6 +32,8 @@ Once you have your `BOT_TOKEN` and `CHAT_ID`, set them as environment variables 
 TELEGRAM_BOT_TOKEN=123456789:ABCdefGhIJKlmnoPQrstuvWXyz
 TELEGRAM_CHAT_ID=123456789
 
+---
+
 ## 🔔 Webhook Integration with Radarr and Sonarr
 
 TeleArr listens for webhook events and sends them as Telegram messages. To connect Radarr or Sonarr to your TeleArr bot, follow these steps:
