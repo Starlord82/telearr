@@ -1,0 +1,11 @@
+version: '3'
+services:
+  teleArr:
+    image: starlord958/telearr:latest  
+    container_name: telearr
+    ports:
+      - "5010:5000"
+    environment:
+      TELEGRAM_TOKEN: your_bot_token
+      TELEGRAM_CHAT_ID: your_chat_id
+    restart: unless-stopped
