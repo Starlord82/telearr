@@ -36,31 +36,23 @@ TELEGRAM_CHAT_ID=123456789
 
 ## 🔔 Webhook Integration with Radarr and Sonarr
 
-TeleArr listens for webhook events and sends them as Telegram messages. To connect Radarr or Sonarr to your TeleArr bot, follow these steps:
+TeleArr listens for webhook events from Radarr and Sonarr and forwards them as Telegram messages.
 
-### 📡 Radarr / Sonarr Setup
+### ⚙️ Steps to Integrate:
 
 1. Open **Radarr** or **Sonarr**
-2. Go to **Settings** → **Connect**
-3. Click **Add** → Choose **Webhook**
-4. Fill in the following:
+2. Go to:  
+   `Settings` → `Connect` → `+ Add` → choose **Webhook**
+3. Fill in the following fields:
 
-   - **Name:** `TeleArr`
-   - **Method:** `POST`
-   - **URL:**  
-     For Radarr:  
-     ```
-     http://your-server-ip:5000/radarr
-     ```  
-     For Sonarr:  
-     ```
-     http://your-server-ip:5000/sonarr
-     ```
-   - **Username / Password:** *(leave empty)*
+| Field        | Value                                   |
+|--------------|-----------------------------------------|
+| **Method**   | `POST`                                  |
+| **URL**      | `http://your-server-ip:5000/webhook`    |
+| **Name**     | `TeleArr` (or any name you prefer)      |
+| **Triggers** | Choose the events you'd like to monitor |
 
-5. Under **Triggers**, enable the events you want to receive (e.g., `Download`, `Rename`, `Grab`, etc.)
-
-6. Click **Test** or **Save**
+4. Click **Test** to verify. You should receive a Telegram message.
 
 Your bot should now send updates when the selected events occur.
 
